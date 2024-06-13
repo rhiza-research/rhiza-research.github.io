@@ -2722,7 +2722,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 1px;
+			border: solid 0px;
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2776,8 +2776,9 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
-		table tbody tr:nth-child(2n + 1) {
-			background-color: rgba(255, 255, 255, 0.075);
+		table tbody tr:nth-child(even) {
+			/*background-color: rgba(255, 255, 255, 0.075);*/
+            background-color: transparent;
 		}
 
 	table th {
@@ -3561,7 +3562,8 @@ input, select, textarea {
 		}
 
 			#main table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: transparent; /*rgba(222, 222, 222, 0.25);*/
+                vertical-align: middle;
 			}
 
 		#main table th {
