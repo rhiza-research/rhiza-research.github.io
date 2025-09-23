@@ -2716,6 +2716,17 @@ input, select, textarea {
 		overflow-x: auto;
 	}
 
+    td{
+      display: block;
+    }
+
+    @media (min-width: 720px)
+    {
+      td {
+        display: table-cell;
+      }
+    }
+
 	table {
 		margin: 0 0 2em 0;
 		width: 100%;
