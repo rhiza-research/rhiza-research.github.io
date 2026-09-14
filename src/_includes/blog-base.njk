@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{% if title %}{{ title }} | {% endif %}Rhiza Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		{% if description %}<meta name="description" content="{{ description }}" />{% endif %}
+		<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+		<link rel="stylesheet" href="{{ '/assets/css/blog.css' | url }}" />
+		<link rel="icon" type="image/x-icon" href="{{ '/images/favicon.ico' | url }}">
+		<link rel="icon" href="{{ '/favicon.ico' | url }}">
+		<noscript>
+			<link rel="stylesheet" href="{{ '/assets/css/noscript.css' | url }}" />
+		</noscript>
+	</head>
+	<body class="is-preload blog-page">
+		<div id="wrapper">
+			<header class="blog-topbar">
+				<a class="blog-brand" href="{{ '/' | url }}">
+					<img src="{{ '/images/rhiza_v5.png' | url }}" alt="Rhiza Research" />
+				</a>
+				<nav class="blog-nav" aria-label="Primary">
+					<ul>
+						<li><a href="{{ '/#mission' | url }}">Mission</a></li>
+						<li><a href="{{ '/#intro' | url }}">Programs</a></li>
+						<li><a href="{{ '/#first' | url }}">People</a></li>
+						<li><a href="{{ '/blog/' | url }}"{% if page.url.indexOf('/blog/') === 0 %} class="active"{% endif %}>Blog</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="main">
+				{{ content | safe }}
+			</div>
+
+			<footer id="footer">
+				<section>
+					<h2>Contact Us</h2>
+					<p>If you are interested in our programs, please reach out!</p>
+				</section>
+				<section>
+					<dl class="alt">
+						<dt>Address</dt>
+						<dd>3033 Harrison St &bull; Oakland, CA 94611 &bull; USA</dd>
+						<dt>Email</dt>
+						<dd><a href="mailto:info@rhizaresearch.org">info@rhizaresearch.org</a></dd>
+					</dl>
+				</section>
+				<p class="copyright">&copy; Rhiza Research - 2024.</p>
+			</footer>
+		</div>
+
+		<script src="{{ '/assets/js/jquery.min.js' | url }}"></script>
+		<script src="{{ '/assets/js/jquery.scrollex.min.js' | url }}"></script>
+		<script src="{{ '/assets/js/jquery.scrolly.min.js' | url }}"></script>
+		<script src="{{ '/assets/js/browser.min.js' | url }}"></script>
+		<script src="{{ '/assets/js/breakpoints.min.js' | url }}"></script>
+		<script src="{{ '/assets/js/util.js' | url }}"></script>
+		<script src="{{ '/assets/js/main.js' | url }}"></script>
+	</body>
+</html>

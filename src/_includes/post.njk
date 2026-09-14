@@ -1,0 +1,18 @@
+---
+layout: blog-base.njk
+---
+<section class="main blog-post">
+	<header class="major">
+		{% if cover %}
+		<span class="image main blog-cover"><img src="{{ cover | url }}" alt="" /></span>
+		{% endif %}
+		<h1>{{ title }}</h1>
+		<p class="blog-meta">
+			<time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+		</p>
+	</header>
+	<div class="blog-content">
+		{{ content | safe }}
+	</div>
+	<p class="blog-back"><a href="{{ '/blog/' | url }}">&larr; Back to Blog</a></p>
+</section>
