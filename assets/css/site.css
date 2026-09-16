@@ -159,7 +159,7 @@ article {
 
 main {
 	padding: 2.4rem 4rem 8rem 1.6rem;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	line-height: 1.2;
 	font-weight: 350;
 }
@@ -852,7 +852,7 @@ dd code {
 
 .blog-content {
 	max-width: 62rem;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	line-height: 1.2;
 }
 
@@ -959,7 +959,7 @@ dd code {
 
 	main {
 		padding: 2.4rem 2rem 4rem;
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 
 	main > article + article {
@@ -1003,6 +1003,6 @@ dd code {
 	}
 
 	.blog-content {
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 }
