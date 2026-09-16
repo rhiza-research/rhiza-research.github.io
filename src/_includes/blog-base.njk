@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{% if title %}{{ title }} · {% endif %}rhiza research</title>
+	<meta name="description" content="{{ description or 'Open technology to serve people and the planet.' }}" />
+	<link rel="icon" href="{{ '/favicon.ico' | url }}" />
+	<link rel="icon" type="image/x-icon" href="{{ '/images/favicon.ico' | url }}" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,350;0,14..32,400;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}" />
+</head>
+<body>
+	<div class="site">
+		<aside class="index">
+			<header class="masthead">
+				<a href="{{ '/#overview' | url }}" class="brand">
+					<img class="logo" src="{{ '/images/rhiza_graphic.png' | url }}" width="120" height="160" alt="" />
+					<h1 class="name">rhiza research</h1>
+				</a>
+				<p class="tagline">open technology to serve people and the planet</p>
+			</header>
+			<hr />
+			{% set current = "blog" %}
+			{% include "site-nav.njk" %}
+			<nav class="footer-links" aria-label="quick links">
+				<a href="https://weather-skills.org/" target="_blank" rel="noopener">weather skills</a>
+				<a href="{{ '/#contact' | url }}">contact</a>
+				<a href="mailto:info@rhizaresearch.org" title="info@rhizaresearch.org">email</a>
+			</nav>
+			<p class="credit">site design after <a href="https://duvaltimothy.co.uk/" target="_blank" rel="noopener">duval timothy</a></p>
+		</aside>
+		<main class="blog">
+			{{ content | safe }}
+		</main>
+	</div>
+</body>
+</html>
