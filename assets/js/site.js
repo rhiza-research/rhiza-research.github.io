@@ -1,9 +1,5 @@
 (function () {
 	if (!document.body.classList.contains("home")) return;
-	if (location.hash === "#blog") {
-		location.replace("/blog/");
-		return;
-	}
 
 	var articles = document.querySelectorAll("main > article");
 	var links = document.querySelectorAll(".index ol a");
