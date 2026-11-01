@@ -5,4 +5,15 @@ description: Updates from Rhiza Research on open technology, energy, and weather
 permalink: /blog/
 ---
 <h2>blog</h2>
-<p>Coming soon.</p>
+<ul class="blog-cards">
+	{%- for post in collections.posts %}
+	<li class="blog-card">
+		<a href="{{ post.url | url }}">
+			{% if post.data.cover %}<img src="{{ post.data.cover | url }}" alt="" />{% endif %}
+			<h3>{{ post.data.title }}</h3>
+			<p class="blog-card-date"><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></p>
+			{% if post.data.description %}<p class="blog-card-excerpt">{{ post.data.description }}</p>{% endif %}
+		</a>
+	</li>
+	{%- endfor %}
+</ul>
